@@ -1,0 +1,21 @@
+ 
+module.exports.config = {
+
+}
+
+function server(host , port ,  user , password  ){
+	return function( dbName){
+		return {
+			user : user ,
+			password : password ,
+			port : port ,
+			host : host ,
+			database :dbName ,
+			debug : false ,
+			supportBigNumbers : true ,
+			multipleStatements : true ,
+			dateStrings : "true" ,
+			timezone : 8
+		}
+	}
+}
